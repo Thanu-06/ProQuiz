@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Choose Programming Quiz</h1>
+
+<div class="grid">
+
+<div class="card" onclick="selectLang('c')">
+<img src="images/c.png" alt="C">
+<h3>C</h3>
+</div>
+
+<div class="card" onclick="selectLang('java')">
+<img src="images/java.png" alt="Java">
+<h3>Java</h3>
+</div>
+
+<div class="card" onclick="selectLang('python')">
+<img src="images/python.png" alt="Python">
+<h3>Python</h3>
+</div>
+
+<div class="card" onclick="selectLang('mysql')">
+<img src="images/mysql.png" alt="MySQL">
+<h3>MySQL</h3>
+</div>
+
+<div class="card" onclick="selectLang('html')">
+<img src="images/html.png" alt="HTML">
+<h3>HTML</h3>
+</div>
+
+<div class="card" onclick="selectLang('css')">
+<img src="images/css.png" alt="CSS">
+<h3>CSS</h3>
+</div>
+
+<div class="card" onclick="selectLang('javascript')">
+<img src="images/javascript.png" alt="JavaScript">
+<h3>JavaScript</h3>
+</div>
+
+<div class="card" onclick="selectLang('dsa')">
+<img src="images/dsa.png" alt="DSA">
+<h3>DSA</h3>
+</div>
+
+</div>
+
+<script>
+
+function selectLang(lang){
+
+localStorage.setItem("language",lang)
+
+window.location="quiz.html"
+
+}
+
+</script>
+
+</body>
+</html>

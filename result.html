@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Result</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="resultBox">
+
+<h1>Developer Skill Report</h1>
+
+<h2 id="user"></h2>
+
+<h3 id="score"></h3>
+
+<img id="badgeImage" width="120">
+
+<h2 id="badgeName"></h2>
+
+<p id="message"></p>
+
+<button onclick="restart()">Try Another Quiz</button>
+
+</div>
+
+<script>
+
+let user=localStorage.getItem("user")
+let score=parseInt(localStorage.getItem("score"))
+
+document.getElementById("user").innerText="Developer: "+user
+document.getElementById("score").innerText="Score: "+score+"/20"
+let badge = "";
+let img = "";
+let msg = "";
+
+if(score==20){
+    badge="👑 Perfect Coder";
+    img="images/perfect.png";
+    msg="Outstanding performance! You're a coding legend! 🚀✨";
+}
+else if(score>=18){
+    badge="🥇 Code Master";
+    img="images/master.png";
+    msg="Excellent programming knowledge! Keep shining! 💡🔥";
+}
+else if(score>=15){
+    badge="🥈 Algorithm Pro";
+    img="images/pro.png";
+    msg="Very strong coding skills! Keep optimizing those algorithms! 🖥️⚡";
+}
+else if(score>=10){
+    badge="🥉 Bug Hunter";
+    img="images/hunter.png";
+    msg="Good attempt! Keep hunting those bugs! 🐛🔍";
+}
+else if(score>=5){
+    badge="📘 Learner";
+    img="images/learner.png";
+    msg="Practice more coding! Every line counts! 💻📚";
+}
+else{
+    badge="⚠ Starter";
+    img="images/starter.png";
+    msg="Start learning basics! Small steps lead to mastery! 🌱💪";
+}
+
+document.getElementById("badgeName").innerText=badge
+document.getElementById("badgeImage").src=img
+document.getElementById("message").innerText=msg
+
+function restart(){
+window.location="dashboard.html"
+}
+
+</script>
+
+</body>
+</html>

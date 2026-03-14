@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CodeQuiz Arena</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="loginBox">
+
+<h1>💻 Pro_Quiz</h1>
+
+<p>Enter Developer Name</p>
+
+<input type="text" id="username" placeholder="Developer name">
+
+<button onclick="login()">Enter</button>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value
+
+if(user===""){
+alert("Enter your name")
+return
+}
+
+localStorage.setItem("user",user)
+
+window.location="dashboard.html"
+
+}
+
+</script>
+
+</body>
+</html>
